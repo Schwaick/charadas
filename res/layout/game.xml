@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+    
+    <RelativeLayout
+        android:id="@+id/botoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/cincoDP"
+        android:paddingLeft="@dimen/cincoDP"
+        android:paddingRight="@dimen/cincoDP" >
+
+        <Button
+            android:id="@+id/dica"
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="dica"
+            android:text="@string/dica" />
+
+        <Button
+            android:id="@+id/resposta"
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dica"
+            android:layout_alignBottom="@+id/dica"
+            android:layout_centerHorizontal="true"
+            android:onClick="resposta"
+            android:text="@string/resposta" />
+
+        <Button
+            android:id="@+id/proxima"
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/resposta"
+            android:layout_alignBottom="@+id/resposta"
+            android:layout_alignParentRight="true"
+            android:onClick="proxima"
+            android:text="@string/proxima" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/texto_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botoes"
+        android:layout_above="@+id/ferramentas"
+        android:paddingLeft="@dimen/cincoDP"
+        android:paddingRight="@dimen/cincoDP" >
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/charada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/tamanhoPergunta" />
+        </ScrollView>
+	</RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/ferramentas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="@string/resposta" />
+
+                <Button
+                    android:id="@+id/enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="enviar"
+                    android:text="@string/enviar" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

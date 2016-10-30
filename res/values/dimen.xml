@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamanhoPergunta">22sp</dimen>
+    <dimen name="tamanhoTextToast">20sp</dimen>
+    <dimen name="cincoDP">5dp</dimen>
+    <dimen name="oitoDP">8dp</dimen>
+    <dimen name="dezDP">10dp</dimen>
+    <dimen name="dozeDP">12dp</dimen>
+</resources>

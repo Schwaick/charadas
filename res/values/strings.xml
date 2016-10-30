@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Charadas e Enigmas</string>
+    <string name="description">Shay Development Splash</string>
+    <string name="description2">Fechar Icone</string>
+    <string name="dica">Dar dica</string>
+    <string name="resposta">Resposta</string>
+    <string name="proxima">Próxima</string>
+	<string name="enviar">Enviar</string>
+    
+</resources>
